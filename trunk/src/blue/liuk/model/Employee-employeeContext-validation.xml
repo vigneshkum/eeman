@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="id">
+		<field-validator type="int">
+			<param name="min">0</param>
+			<message>id Required must >${min} </message>
+		</field-validator>
+	</field>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<message>Name Required</message>
+		</field-validator>
+	</field>
+	<field name="sex">
+		<field-validator type="requiredstring">
+			<message>sex Need </message>
+		</field-validator>
+	</field>
+	<field name="bankacc">
+		<field-validator type="requiredstring">
+			<message>bankacc Required</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">10</param>
+			<param name="maxLength">20</param>
+			<message>employeeacc should be between ${minLength} and ${maxLength}</message>
+		</field-validator>
+	</field>
+	<field name="identifycation">
+		<field-validator type="requiredstring">
+			<message>identifycation Required</message>
+		</field-validator>
+	</field>
+	<field name="birthday">
+		<field-validator type="required">
+			<message>Birthday Required </message>
+		</field-validator>
+		<field-validator type="date">
+			<message>Birthday Required</message>
+		</field-validator>
+	</field>
+	<field name="isMarried">
+		<field-validator type="required">
+			<message>isMarried Required </message>
+		</field-validator>
+		<field-validator type="int">
+			<param name="min">0</param>
+			<param name="max">1</param>
+			<message>isMarried Required ${min} and ${max}</message>
+		</field-validator>
+	</field>
+	<field name="politics">
+		<field-validator type="regex">
+			<param name=" expression">
+					<![CDATA[((^[A-Za-z]+$)|(^[\u0391-\uFFE5]+$))]]>
+			</param>
+			<message>politics no string </message>
+		</field-validator>
+	</field>
+	<field name="birthplace">
+		<field-validator type="requiredstring">
+			<message>birthplace Required</message>
+		</field-validator>
+	</field>
+	<field name="telphone">
+		<field-validator type="requiredstring">
+			<message>telphone Required ${minLength} and ${maxLength}</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">20</param>
+			<message>telphone should be between ${minLength} and ${maxLength}</message>
+		</field-validator>
+
+	</field>
+	<field name="address">
+		<field-validator type="requiredstring">
+			<message>address Required</message>
+		</field-validator>
+	</field>
+	<field name="graduatedSchool">
+		<field-validator type="requiredstring">
+			<message>graduatedSchool Required</message>
+		</field-validator>
+	</field>
+	<field name="specialize">
+		<field-validator type="requiredstring">
+			<message>specialize Required</message>
+		</field-validator>
+	</field>
+	<field name="education">
+		<field-validator type="requiredstring">
+			<message>education Required</message>
+		</field-validator>
+	</field>
+	<field name="firstWorkTime">
+		<field-validator type="required">
+			<message>irstWorkTimeRequired </message>
+		</field-validator>
+		<field-validator type="date">
+			<message>firstWorkTime Required</message>
+		</field-validator>
+	</field>
+	<field name="regedisTtime">
+		<field-validator type="required">
+			<message>regedisTtime Required </message>
+		</field-validator>
+		<field-validator type="date">
+			<message>regedisTtime Required</message>
+		</field-validator>
+	</field>
+	<field name="regedistName">
+		<field-validator type="requiredstring">
+			<message>tregedistName Required</message>
+		</field-validator>
+	</field>
+
+</validators>  		
+

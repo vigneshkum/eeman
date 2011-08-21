@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<!-- employee -->
+
+<validators>
+	<!-- <field name="sname"> <field-validator type="requiredstring"> <message>sname 
+		Required</message> </field-validator> </field> -->
+	<field name="employee">
+		<field-validator type="visitor">
+			<param name="context">employeeContext</param>
+			<param name="appendPrefix">true</param>
+			<message>employee:</message>
+		</field-validator>
+	</field>
+
+</validators>
+
+
+
