@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {
+	font-size: 12px
+}
+.STYLE3 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.STYLE4 {
+	color: #03515d;
+	font-size: 12px;
+}
+
+body{
+		font-size: 12px;
+		color:#666;
+	font-family:"微软雅黑"}
+-->
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" background="images/tab_05.gif"><table
+					width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="12" height="30"><img src="images/tab_03.gif"
+							width="12" height="30" /></td>
+          <td><table width="100%" border="0" cellspacing="0"
+								cellpadding="0">
+              <tr>
+                <td width="46%" valign="middle"><table width="100%"
+											border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="5%"><div align="center"></div></td>
+                      <td width="95%" class="STYLE1"><span class="STYLE3">您当前的位置</span>：[首页]-[欢迎页]</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          <td width="16"><img src="images/tab_07.gif" width="16"
+							height="30" /></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0"
+					cellpadding="0">
+        <tr>
+          <td width="8" background="images/tab_12.gif">&nbsp;</td>
+          <td><table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="b5d6e6">
+              <tr style="BACKGROUND-COLOR: #f7f8fa">
+                <td align=left colspan=2 height=26><span class="STYLE3">员工管理 </span></td>
+                
+              </tr>
+              <tr style="BACKGROUND-COLOR: #f7f8fa">
+                <td align=left colspan=2 height=26><input name="ID" type="text" value="id"><input type="button" value="快速查找"></td>
+              </tr>
+              <tr style="BACKGROUND-COLOR: #f7f8fa">
+                <td align=left colspan=2 height=26><input name="ID" type="text" value="id"><input type="button" value="姓名查找"></td>
+              </tr>
+              
+              
+            </table>
+            
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="b5d6e6">
+              <tr style="BACKGROUND-COLOR: #f7f8fa">
+                <td align=left colspan=8 height=26><input type="button" value="刷新"><input type="button" value="高级查询"><input type="button" value="删除选择"></td>
+              </tr>
+              <tr style="BACKGROUND-COLOR: #f7f8fa">
+                <td height=26>
+                      <input type="checkbox" name="CheckboxGroup1" value="复选框" id="CheckboxGroup1_0"></td>
+                     <td class="infotitle">ID</td>
+						<td class="infotitle">姓名</td>
+						<td class="infotitle">性别</td>
+						<td class="infotitle">年龄</td>
+						<td class="infotitle">文化程度</td>
+						<td class="infotitle">电话</td>
+						<td class="infotitle">部门</td>
+						<td class="infotitle">删除</td>
+						<td class="infotitle">修改</td>
+						<td class="infotitle">查看更多</td>
+              </tr>
+              <s:iterator value="pagelist.list">
+
+						  <tr style="BACKGROUND-COLOR: #f7f8fa">
+							<td><input type="checkbox" name="ids"
+								value="<s:property value="id" />" />
+							</td>
+							<td><s:property value="id" />
+							</td>
+							<td><s:property value="name" />
+							</td>
+							<td><s:property value="sex" />
+							</td>
+							<td><s:property value="age" />
+							</td>
+							<td><s:property value="education" />
+							</td>
+							<td><s:property value="telphone" />
+							</td>
+							<td><a
+								href="部门action?id=<s:property value="myeDepartment.id" />"><s:property
+										value="myeDepartment.name" />
+							</a>
+							</td>
+							<td><a href="hremAction!delete?id=<s:property value="id" />">delete</a>
+							</td>
+							<td><a href="hremAction!edit?id=<s:property value="id" />">modify</a>
+							</td>
+							<td><a href="hremAction!showem?id=<s:property value="id" />">more</a>
+							</td>
+
+						</tr>
+
+
+
+					</s:iterator>
+            </table>
+            
+            
+            
+            </td>
+          <td width="8" background="images/tab_15.gif">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="35" background="images/tab_19.gif"><table
+					width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="12" height="35"><img src="images/tab_18.gif"
+							width="12" height="35" /></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><div id="nav">
+			<s:if test="%{pagelist.pageNum!=1}">
+				<s:a
+					href="%{pagelist.url}%{pagelist.para}pagelist.pageNum=%{pagelist.pagePreNum}">上一页</s:a>
+			</s:if>
+			<s:if test="%{pagelist.pageTotalCount>1}">
+				<s:iterator value="pagelist.pageNums" status="st">
+					<s:if test="%{pagelist.pageNum==#st.index+1}">
+						<s:property />
+					</s:if>
+					<s:else>
+						<s:a
+							href="%{pagelist.url}%{pagelist.para}pagelist.pageNum=%{#st.index+1}">
+							<s:property />
+						</s:a>
+					</s:else>
+				</s:iterator>
+			</s:if>
+			<s:if test="%{pagelist.pageNum!=pagelist.pageTotalCount}">
+				<s:a
+					href="%{pagelist.url}%{pagelist.para}pagelist.pageNum=%{pagelist.pageNextNum}">下一页</s:a>
+			</s:if>
+		</div></td>
+                <td class="STYLE4">&nbsp;&nbsp;</td>
+              </tr>
+            </table></td>
+          <td width="16"><img src="images/tab_20.gif" width="16"
+							height="35" /></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
