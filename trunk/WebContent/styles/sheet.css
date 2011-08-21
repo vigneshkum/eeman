@@ -1,0 +1,56 @@
+body{
+	FONT-SIZE: 9pt; color: #364B7E;
+	background-color:#ffffff;
+	BORDER-RIGHT: #E6EBEF 0px solid;
+	BORDER-TOP: #E6EBEF 0px solid;
+	BORDER-LEFT: #E6EBEF 0px solid;
+	BORDER-BOTTOM: #E6EBEF 0px solid ;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	scrollbar-3dlight-color:#B1C3DB;
+    scrollbar-arrow-color:#3F4A77;
+    scrollbar-track-color:#FFFFFF;
+    scrollbar-darkshadow-color:#B1C3DB;
+    scrollbar-face-color:#E3EAF4;
+    scrollbar-highlight-color:#FFFFFF;
+	scrollbar-shadow-color:#FFFFFF
+}
+img{border:0px;}
+th, td {
+	white-space:nowrap !important;
+}
+.cRed,a.cRed:link,a.cRed:visited{ color:#f00; }
+.navT{
+	font-weight:bold;
+	font-size:14px;
+	padding-left:8px;
+	padding-top:8px;
+}
+.g_box{
+	border:1px solid #6F7B89;
+	BACKGROUND-COLOR: #ffffff; 
+}
+.g_box_area{
+	width:80%;
+	height:50px;
+}
+.g_box_area_h150{
+	height:150px;
+}
+.g_box_pwd{
+	width:150px;
+}
+.g_box_readonly{
+	BACKGROUND-COLOR: #dedede; 
+}	
+.box { 
+	BORDER-RIGHT: 1px ridge;
+	BORDER-TOP: #ffffff 1px ridge;
+	BORDER-LEFT: #ffffff 1px ridge;
+	BORDER-BOTTOM: 1px ridge;
+	BACKGROUND-COLOR: #b5d6e6;
+	font-size: 9pt;
+	color: #000000; 
+}

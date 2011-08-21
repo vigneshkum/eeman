@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menus label="Hr System">
+
+	<menu label=" 通知信息" url="notice/getall">
+		<note label=" 通知信息添加" url="notice/add" />
+	</menu>
+	
+	<menu label="员工信息管理" url="employee/getall">
+		<note label="添加员工信息" url="employee/add" />
+		<note label="高级查找员工信息" url="employee/gosearch" />
+	</menu>
+	
+	<menu label="培训信息管理" url="train/getall">
+		<note label="添加培训信息"  url="train/add"/>
+		<note label="查找" url="train/gosearch" />
+	</menu>
+	<menu label="员工奖惩管理" url="reward/getall">
+		<note label="添加奖惩信息" url="reward/add" />
+		<note label="查找" url="reward/gosearch" />
+	</menu>
+	
+	<menu label="部门信息管理" url="dept/getall">
+		<note label="添加部门" url="dept/add" />
+	</menu>
+	
+	<menu label="招聘信息管理" url="invite/getall">
+		<note label="添加招聘信息" url="invite/add" />
+	</menu>
+	<menu label="员工工资管理" url="salary/getall">
+		<note label="添加工资信息" url="salary/add"  />
+		<note label="查找"  url="salary/gosearch" />
+	</menu>
+	<menu label="系统用户管理" url="user/getall">
+		<note label="添加用户" url="user/add" />
+	</menu>
+	<menu label="角色权限管理" url="permission/getall">
+		<note label="添加角色" url="permission/add"/>
+	</menu>
+	
+</menus>
