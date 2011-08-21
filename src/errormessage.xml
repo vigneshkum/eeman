@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 异常提示信息 -->
+<exmsgs>
+	<!-- 指定语言 -->
+	<local>zh_cn</local>
+	<!-- 简体中文 -->
+	<zh_cn>
+		<idcannotfind>找不到记录</idcannotfind>
+		<idcandelete>删除记录出错</idcandelete>
+		<idisnull>id不能为空</idisnull>
+		<saveerror>保存出错</saveerror>
+		<updateerror>更新出错</updateerror>
+		<isnull>不能为空</isnull>
+		<noresult>没有搜索的结果</noresult>
+		<deptnamerepeat>部门名称重复</deptnamerepeat>
+		<delerrorhasems>部门仍有员工</delerrorhasems>
+		<noaccess>没有权限</noaccess>
+		<nocheck>请先审核再录用</nocheck>
+		<idisnull>Id为空</idisnull>
+		<sysadmindelete>系统内置管理员不能被删除</sysadmindelete>
+		<rolehaveusers>仍有用户使用此角色，请删除后操作</rolehaveusers>
+		<idfindno>指定id没有结果</idfindno>
+		<saveerror>保存失败</saveerror>
+		<useriddisable>用户被禁用</useriddisable>
+		<usernamedu>用户名重复</usernamedu>
+		<rolenamedu>角色名重复</rolenamedu>
+		<sysadminedit>内置管理员不能编辑此项目</sysadminedit>
+		
+	</zh_cn>
+	<!-- 英语 -->
+	<us_en>
+		<idcannotfing>can't find the record,your id for the record is:
+		</idcannotfing>
+		<idcandelete>can't delete this record,the id of the record is:
+		</idcandelete>
+		<idisnull>you must input the id </idisnull>
+	</us_en>
+</exmsgs>

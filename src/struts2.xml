@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+
+	<package name="tutorial" extends="struts-default" namespace="/">
+		<interceptors>
+			<!-- <interceptor name="SystemInterceptor" class="blue.liuk.util.SystemIn"></interceptor> 
+				<interceptor name="SystemInterceptorm" class="blue.liuk.util.SystemInMa"></interceptor> -->
+			<interceptor-stack name="SystemIns">
+				<!-- <interceptor-ref name="SystemInterceptor"></interceptor-ref> -->
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="defaultStack"></default-interceptor-ref>
+
+		<default-action-ref name="pagenotfound"></default-action-ref>
+
+
+		<global-results>
+			<result name="error">error.jsp</result>
+			<result name="login" type="redirect">login.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+
+		<action name="pagenotfound">
+			<result>error.jsp</result>
+		</action>
+
+	</package>
+</struts>
